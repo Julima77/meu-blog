@@ -19,13 +19,22 @@ p {
     line-height: 1.6;
 }
 .post {
-    background-color: #e6ccff;
+    background-color: #ede7f6;
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
 }
-
+.post:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 20px rgba(0,0,0,0.15);
+}
+.post img {
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 10px;
+}
 .menu {
     background-color: #d1a3ff;
     padding: 15px;
@@ -130,6 +139,59 @@ img {
         font-size: 24px;
         text-align: center;
     }
-
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
 }
+.post h2 {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.post p {
+    line-height: 1.6;
+}
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    .post {
+        padding: 15px;
+    }
+}
+.galeria {
+    margin-top: 40px;
+}
+
+.galeria h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.galeria {
+    margin-top: 40px;
+}
+
+.galeria h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.grid-galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+}
+.grid-galeria img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+.grid-galeria img:hover {
+    transform: scale(1.05);
+}
+
 
