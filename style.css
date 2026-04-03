@@ -137,6 +137,7 @@ img {
     display: grid;
     grid-template-columns: 1fr 1fr; /* 2 colunas */
     gap: 5px;
+    background-color: #ede7f6;
 
     padding: 8px;
 }
@@ -165,10 +166,8 @@ img {
     margin-bottom: 10px;
     font-size: 20px;
 }
-
 .post p {
     line-height: 1.6;
-}
 }
 .galeria {
     margin-top: 40px;
