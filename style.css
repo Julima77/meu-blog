@@ -203,6 +203,9 @@ img {
 .grid-galeria img:hover {
     transform: scale(1.05);
 }
+.grid-galeria img {
+    cursor: pointer;
+}
 body {
     scroll-padding-top: 80px;
 }

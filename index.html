@@ -105,12 +105,22 @@ const fechar = document.querySelector(".fechar");
 
 let scrollY = 0;
 
-imagens.forEach(img => {
-    img.addEventListener("click", () => {
-        scrollY = window.scrollY;
+function abrirLightbox(src) {
+    scrollY = window.scrollY;
 
-        lightbox.style.display = "flex";
-        lightboxImg.src = img.src;
+    lightbox.style.display = "flex";
+    lightboxImg.src = src;
+}
+
+imagens.forEach(img => {
+    img.addEventListener("click", (e) => {
+        e.preventDefault();
+        abrirLightbox(img.src);
+    });
+
+    // 👇 isso resolve celular (touch)
+    img.addEventListener("touchstart", () => {
+        abrirLightbox(img.src);
     });
 });
 
@@ -126,7 +136,6 @@ lightbox.addEventListener("click", (e) => {
         fecharLightbox();
     }
 });
-</script>
-</body>
+</script></body>
 
 </html>
