@@ -1,0 +1,135 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #faf7ff;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    color: #2c3e50;
+    text-align: center;
+}
+
+h2 {
+    color: #34495e;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+.post {
+    background-color: #e6ccff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.menu {
+    background-color: #d1a3ff;
+    padding: 15px;
+    text-align: center;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+.menu a:hover {
+    text-decoration: underline;
+}
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-top: 10px;
+    border-radius: 10px;
+    width: 100%
+}
+
+.sobre-mim {
+    background-color: #ede7f6;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.sobre-mim img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.contato {
+    background-color: #ede7f6;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.email {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.email a {
+    color: #7b1fa2;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.email a:hover {
+    text-decoration: underline;
+}
+.instagram a {
+    color: #e1306c;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.instagram a:hover {
+    text-decoration: underline;
+}
+@media (max-width: 768px) {
+
+    .container {
+        padding: 10px;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .post {
+        padding: 10px;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+
+    h1 {
+        font-size: 24px;
+        text-align: center;
+    }
+
+}
+
