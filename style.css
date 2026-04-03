@@ -37,15 +37,16 @@ p {
 }
 .menu {
     background-color: #d1a3ff;
-    padding: 15px;
+    padding: 8px 10px; /* antes era 15px */
     text-align: center;
-    border-radius: 10px;
-    margin-bottom: 20px;
+    border-radius: 8px; /* menor */
+    margin-bottom: 10px;
 
     position: sticky;
     top: 0;
     z-index: 1000;
 }
+
 .menu a {
     color: white;
     text-decoration: none;
