@@ -50,13 +50,13 @@ p {
 .menu a {
     color: white;
     text-decoration: none;
-    margin: 0 15px;
+    margin: 0 8px; /* menor espaço */
     font-weight: bold;
-    padding: 5px 10px;
+    font-size: 14px; /* menor texto */
+    padding: 4px 8px; /* botão menor */
     border-radius: 8px;
     transition: 0.3s;
 }
-
 .menu a:hover {
     background-color: rgba(255,255,255,0.3);
 }
@@ -133,13 +133,13 @@ img {
         padding: 10px;
     }
 
-    .menu {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        text-align: center;
-    }
-
+   .menu {
+    display: flex;
+    flex-direction: row; /* 👈 deixa em linha */
+    justify-content: space-around;
+    gap: 5px;
+    flex-wrap: wrap;
+}
     .post {
         padding: 10px;
     }
