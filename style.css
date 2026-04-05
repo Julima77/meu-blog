@@ -133,6 +133,21 @@ img {
         padding: 10px;
     }
 
+    .menu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        flex-wrap: nowrap;
+    }
+
+    .menu a {
+        font-size: 12px;
+        padding: 4px 6px;
+        white-space: nowrap;
+    }
+}
+
 .menu {
     display: flex;
     justify-content: center;
