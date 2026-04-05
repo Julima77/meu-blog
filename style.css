@@ -201,7 +201,7 @@ img {
 }
 .grid-galeria img {
     width: 100%;
-    height: 140px;
+    height: 150px;
     object-fit: cover;
     border-radius: 10px;
     transition: transform 0.3s;
@@ -244,6 +244,11 @@ body {
     cursor: pointer;
 }
 
+.lightbox-img.zoom {
+    transform: scale(1.8);
+    transition: 0.3s;
+}
+
 .grid-galeria figure {
     margin: 0;
 }
@@ -255,3 +260,21 @@ body {
     color: #555;
 }
 
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    user-select: none;
+}
+
+.prev {
+    left: 20px;
+}
+
+.next {
+    right: 20px;
+}
