@@ -421,6 +421,30 @@ prev.addEventListener("click", (e) => {
     e.stopPropagation();
     mostrarImagem(indiceAtual - 1);
 });
+
+// 📱 SWIPE no celular
+let startX = 0;
+
+lightbox.addEventListener("touchstart", (e) => {
+    startX = e.touches[0].clientX;
+});
+
+lightbox.addEventListener("touchend", (e) => {
+    let endX = e.changedTouches[0].clientX;
+
+    if (startX - endX > 50) {
+        mostrarImagem(indiceAtual + 1);
+    }
+
+    if (endX - startX > 50) {
+        mostrarImagem(indiceAtual - 1);
+    }
+});
+// 🔍 ZOOM no clique da imagem
+lightboxImg.addEventListener("click", (e) => {
+    e.stopPropagation();
+    lightboxImg.classList.toggle("zoom");
+});
 </script>
 </body>
 

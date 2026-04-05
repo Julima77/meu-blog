@@ -133,19 +133,20 @@ img {
         padding: 10px;
     }
 
- .menu {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* 2 colunas */
-    gap: 5px;
+.menu {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
     background-color: #ede7f6;
-
     padding: 8px;
+    flex-wrap: nowrap;
 }
 
 .menu a {
     font-size: 13px;
     padding: 6px;
     text-align: center;
+    text-decoration: none;
 }
 
     .post {
