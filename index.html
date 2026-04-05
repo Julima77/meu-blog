@@ -364,11 +364,10 @@ const next = document.querySelector(".next");
 // abrir imagem
 function abrirImagem(index) {
     indiceAtual = index;
-    lightboxImg.src = imagens[indiceAtual].src;
+    mostrarImagem(index);
     lightbox.style.display = "flex";
     scrollY = window.scrollY;
 }
-
 function mostrarImagem(novoIndex) {
     indiceAtual = (novoIndex + imagens.length) % imagens.length;
     lightboxImg.src = imagens[indiceAtual].src;
