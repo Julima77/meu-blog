@@ -161,6 +161,10 @@ img {
         font-size: 24px;
         text-align: center;
     }
+
+    .grid-galeria {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 .post h2 {
     margin-bottom: 10px;
@@ -188,12 +192,16 @@ img {
 
 .grid-galeria {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 10px;
+}
+.grid-galeria figure {
+    margin: 0;
+    width: 100%;
 }
 .grid-galeria img {
     width: 100%;
-    height: 150px;
+    height: 140px;
     object-fit: cover;
     border-radius: 10px;
     transition: transform 0.3s;
@@ -234,5 +242,16 @@ body {
     font-size: 40px;
     color: white;
     cursor: pointer;
+}
+
+.grid-galeria figure {
+    margin: 0;
+}
+
+.grid-galeria figcaption {
+    font-size: 12px;
+    text-align: center;
+    margin-top: 5px;
+    color: #555;
 }
 
