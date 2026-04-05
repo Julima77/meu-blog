@@ -136,7 +136,8 @@ img {
 .menu {
     display: flex;
     justify-content: center;
-    gap: 25px;
+    align-items: center;
+    gap: 20px;
     background-color: #ede7f6;
     padding: 8px;
     flex-wrap: nowrap;
@@ -144,9 +145,10 @@ img {
 
 .menu a {
     font-size: 13px;
-    padding: 6px;
+    padding: 6px 8px;
     text-align: center;
     text-decoration: none;
+    white-space: nowrap; /* impede quebra dentro do texto */
 }
 
     .post {
