@@ -401,18 +401,18 @@ document.addEventListener("keydown", (e) => {
     if (lightbox.style.display !== "flex") return;
 
     if (e.key === "ArrowRight") {
-        indiceAtual = (indiceAtual + 1) % imagens.length;
-        lightboxImg.src = imagens[indiceAtual].src;
+        mostrarImagem(indiceAtual + 1);
     }
 
     if (e.key === "ArrowLeft") {
-        indiceAtual = (indiceAtual - 1 + imagens.length) % imagens.length;
-        lightboxImg.src = imagens[indiceAtual].src;
+        mostrarImagem(indiceAtual - 1);
     }
 
     if (e.key === "Escape") {
         fecharLightbox();
     }
+});
+
 next.addEventListener("click", (e) => {
     e.stopPropagation();
     mostrarImagem(indiceAtual + 1);
