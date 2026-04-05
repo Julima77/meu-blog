@@ -133,24 +133,23 @@ img {
         padding: 10px;
     }
 
-    .menu {
-        display: flex;
-        justify-content: space-between; /* espalha melhor */
-        align-items: center;
-        padding: 6px 10px;
-        gap: 5px;
-        flex-wrap: nowrap;
-        width: 100%;
-        box-sizing: border-box; /* ESSENCIAL */
-    }
+  .menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 4px 2px;
+     }
 
-    .menu a {
-        font-size: 12px;
-        padding: 2px 3px;
-        white-space: nowrap;
-        flex: 1; /* ajuda a distribuir espaço */
-        text-align: center;
-    }
+.menu a {
+    font-size: 10px;
+    padding: 2px;
+    white-space: nowrap;
+    flex: 1;
+    text-align: center;
+     }
+
 }
     .menu a {
         font-size: 12px;
