@@ -3,6 +3,7 @@ body {
     background-color: #faf7ff;
     margin: 0;
     padding: 20px;
+    overflow-x: hidden;
 }
 
 h1 {
@@ -18,6 +19,51 @@ p {
     font-size: 18px;
     line-height: 1.6;
 }
+
+/* ===================== MENU ===================== */
+
+.menu {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+
+    background-color: #ede7f6;
+    padding: 10px;
+
+    width: 100%;
+    box-sizing: border-box;
+
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.menu a {
+    color: #7b1fa2;
+    text-decoration: none;
+    font-weight: bold;
+
+    padding: 6px 10px;
+    border-radius: 8px;
+
+    white-space: nowrap;
+    font-size: 14px;
+}
+
+.menu a:hover {
+    background-color: rgba(123, 31, 162, 0.1);
+}
+
+.menu a.active {
+    background-color: white;
+    color: #7b1fa2;
+}
+
+/* ===================== POSTS ===================== */
+
 .post {
     background-color: #ede7f6;
     padding: 20px;
@@ -26,59 +72,46 @@ p {
     box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
     transition: transform 0.3s, box-shadow 0.3s;
 }
+
 .post:hover {
     transform: translateY(-5px);
     box-shadow: 0px 8px 20px rgba(0,0,0,0.15);
 }
+
 .post img {
     width: 100%;
     border-radius: 10px;
     margin-top: 10px;
 }
-.menu {
-    background-color: #ede7f6;
-    border: 1px solid #ddd;
-    padding: 8px 10px; /* antes era 15px */
-    text-align: center;
-    border-radius: 8px; /* menor */
+
+.post h2 {
     margin-bottom: 10px;
-
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-.menu a {
-    color: white;
-    text-decoration: none;
-    margin: 0 15px;
-    font-weight: bold;
-    padding: 5px 10px;
-    border-radius: 8px;
-    transition: 0.3s;
+    font-size: 20px;
 }
 
-.menu a:hover {
-    background-color: rgba(255,255,255,0.3);
+.post p {
+    line-height: 1.6;
 }
 
-/* destaque do ativo */
-.menu a.active {
-    background-color: white;
-    color: #7b1fa2;
-}
+/* ===================== IMAGENS ===================== */
+
 img {
     max-width: 100%;
     height: auto;
     display: block;
     margin-top: 10px;
     border-radius: 10px;
-    width: 100%
 }
+
+/* ===================== CONTAINER ===================== */
+
 .container {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
 }
+
+/* ===================== SOBRE MIM ===================== */
 
 .sobre-mim {
     background-color: #ede7f6;
@@ -95,6 +128,8 @@ img {
     border-radius: 50%;
     margin-bottom: 10px;
 }
+
+/* ===================== CONTATO ===================== */
 
 .contato {
     background-color: #ede7f6;
@@ -118,6 +153,7 @@ img {
 .email a:hover {
     text-decoration: underline;
 }
+
 .instagram a {
     color: #e1306c;
     font-weight: bold;
@@ -127,90 +163,9 @@ img {
 .instagram a:hover {
     text-decoration: underline;
 }
-@media (max-width: 768px) {
 
-    .container {
-        padding: 10px;
-        overflow-x: hidden;
-    }
+/* ===================== GALERIA ===================== */
 
-  .menu {
-       display: flex;
-       justify-content: space-evenly;
-       align-items: center;
-       width: 100%;
-       box-sizing: border-box;
-       padding: 4px 6px;
-       overflow-x: hidden;
-     }
-
-.menu a {
-        font-size: 11px;
-        padding: 2px;
-        white-space: nowrap;
-        flex: 1;
-        text-align: center;     
-  }
-
-}
-    .menu a {
-        font-size: 12px;
-        padding: 4px 6px;
-        white-space: nowrap;
-    }
-}
-
-.menu {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    background-color: #ede7f6;
-    padding: 8px;
-    flex-wrap: nowrap;
-}
-
-.menu a {
-    font-size: 13px;
-    padding: 6px 8px;
-    text-align: center;
-    text-decoration: none;
-    white-space: nowrap; /* impede quebra dentro do texto */
-}
-
-    .post {
-        padding: 10px;
-    }
-
-    img {
-        width: 100%;
-        height: auto;
-    }
-
-    h1 {
-        font-size: 24px;
-        text-align: center;
-    }
-
-    .grid-galeria {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-.post h2 {
-    margin-bottom: 10px;
-    font-size: 20px;
-}
-.post p {
-    line-height: 1.6;
-}
-.galeria {
-    margin-top: 40px;
-}
-
-.galeria h2 {
-    text-align: center;
-    margin-bottom: 20px;
-}
 .galeria {
     margin-top: 40px;
 }
@@ -225,26 +180,33 @@ img {
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
 }
+
 .grid-galeria figure {
     margin: 0;
-    width: 100%;
 }
+
 .grid-galeria img {
     width: 100%;
     height: 150px;
     object-fit: cover;
     border-radius: 10px;
     transition: transform 0.3s;
+    cursor: pointer;
 }
+
 .grid-galeria img:hover {
     transform: scale(1.05);
 }
-.grid-galeria img {
-    cursor: pointer;
+
+.grid-galeria figcaption {
+    font-size: 12px;
+    text-align: center;
+    margin-top: 5px;
+    color: #555;
 }
-body {
-    scroll-padding-top: 80px;
-}
+
+/* ===================== LIGHTBOX ===================== */
+
 .lightbox {
     display: none;
     position: fixed;
@@ -274,22 +236,6 @@ body {
     cursor: pointer;
 }
 
-.lightbox-img.zoom {
-    transform: scale(1.8);
-    transition: 0.3s;
-}
-
-.grid-galeria figure {
-    margin: 0;
-}
-
-.grid-galeria figcaption {
-    font-size: 12px;
-    text-align: center;
-    margin-top: 5px;
-    color: #555;
-}
-
 .prev, .next {
     position: absolute;
     top: 50%;
@@ -307,4 +253,45 @@ body {
 
 .next {
     right: 20px;
+}
+
+.lightbox-img.zoom {
+    transform: scale(1.8);
+    transition: 0.3s;
+}
+
+/* ===================== RESPONSIVO ===================== */
+
+@media (max-width: 768px) {
+
+    body {
+        padding: 10px;
+    }
+
+    .menu {
+        flex-wrap: wrap;
+        gap: 6px;
+        padding: 8px;
+    }
+
+    .menu a {
+        font-size: 12px;
+        padding: 5px 8px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    .post {
+        padding: 10px;
+    }
+
+    .grid-galeria {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
