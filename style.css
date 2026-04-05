@@ -146,7 +146,7 @@ img {
 
     .menu a {
         font-size: 12px;
-        padding: 4px 6px;
+        padding: 2px 3px;
         white-space: nowrap;
         flex: 1; /* ajuda a distribuir espaço */
         text-align: center;
