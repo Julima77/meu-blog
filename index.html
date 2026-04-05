@@ -358,6 +358,8 @@ const fechar = document.querySelector(".fechar");
 
 let scrollY = 0;
 let indiceAtual = 0;
+const prev = document.querySelector(".prev");
+const next = document.querySelector(".next");
 
 // abrir imagem
 function abrirImagem(index) {
@@ -365,6 +367,11 @@ function abrirImagem(index) {
     lightboxImg.src = imagens[indiceAtual].src;
     lightbox.style.display = "flex";
     scrollY = window.scrollY;
+}
+
+function mostrarImagem(novoIndex) {
+    indiceAtual = (novoIndex + imagens.length) % imagens.length;
+    lightboxImg.src = imagens[indiceAtual].src;
 }
 
 // clique nas imagens
@@ -406,7 +413,14 @@ document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") {
         fecharLightbox();
     }
+next.addEventListener("click", (e) => {
+    e.stopPropagation();
+    mostrarImagem(indiceAtual + 1);
+});
 
+prev.addEventListener("click", (e) => {
+    e.stopPropagation();
+    mostrarImagem(indiceAtual - 1);
 });
 </script>
 </body>
